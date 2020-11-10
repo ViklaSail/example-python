@@ -70,6 +70,10 @@ Repository tokens are required for (a) all private repos, (b) public repos not u
 ### Cobertura Reports
 Cobertura reports can expire - Codecov will reject reports that are older than 12 hours. The logs contain details if a report expired.
 
+## Additions according to web article
+This is to give beginners a good start for making python packages. Example in following article added as it is, without any changes: 
+https://towardsdatascience.com/whats-init-for-me-d70a312da583
+
 ## Links
 - [Community Boards](https://community.codecov.io)
 - [Support](https://codecov.io/support)
