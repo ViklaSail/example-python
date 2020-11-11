@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 def getData():
     # url = 'http://web.mta.info/developers/turnstile.html'
     url = 'http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json'
-    response = requests.get(url)
+    response = requests.get(url) # task: mock this function. if applicable use with your own data source (URL)
     return response
   
 
