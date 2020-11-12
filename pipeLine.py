@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 # INSTRUCTIONS 
 # Mocking https://docs.python.org/3/library/unittest.mock-examples.html
 # google: python unittest mock tutorial
+# search info on how to unit test a function inside module. usually class is needed but maybe not... hopefully.
+# google: python mock function in module
 # https://www.youtube.com/watch?v=NnodfeQCmPQ mocking request.get
 # 
 # configure VSCode: shift+ctrl+p. Following you should configure: 

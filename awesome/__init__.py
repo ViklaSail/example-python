@@ -1,3 +1,5 @@
+from .laugh import *
+
 def smile():
     return ":)"
 
