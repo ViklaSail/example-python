@@ -22,7 +22,18 @@ def getData():
     url = 'http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json'
     response = requests.get(url) # task: mock this function. if applicable use with your own data source (URL)
     return response
-  
+
+# example skeleton on handling data received to the pipeline
+# map is going through data set record by record and calling modification functions
+def dataHandlingMain(): # record : [2, 3, 1, "name"]
+    dataset = getData()
+    modifiedDataSet = list(map((mapHandlerFunction(recordWhatIsNext)), dataset))
+
+# function to be used inside map to handle data record
+def mapHandlerFunction(record): 
+    # here we need to know columns, meaning fields in the record
+    # record[0]
+
 
 if __name__ == '__main__':
     data = getData()
