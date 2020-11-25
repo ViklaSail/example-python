@@ -30,7 +30,7 @@ def dataHandlingMain(): # record : [2, 3, 1, "name"]
     modifiedDataSet = list(map((mapHandlerFunction(recordWhatIsNext)), dataset))
 
 # function to be used inside map to handle data record
-def mapHandlerFunction(record): 
+#def mapHandlerFunction(record): 
     # here we need to know columns, meaning fields in the record
     # record[0]
 

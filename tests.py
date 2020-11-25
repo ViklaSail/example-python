@@ -22,7 +22,11 @@ from example_pkg import funcSameNameSpace
 # possible solution maybe here https://docs.python.org/3/library/unittest.mock.html#where-to-patch
 from example_pkg import foo_func
 from example_pkg import bar_func
+from dataTransforming import transformationForData
 
+from functools import reduce
+import pandas as pd
+import numpy as np
 # import pipeLine
 
 url = 'http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json'
@@ -74,6 +78,30 @@ class TestMethods(unittest.TestCase):
         df = pd.DataFrame({'c1': [10, 11, 12], 'c2': [100, 110, 120]})
         for index, row in df.iterrows():
             print(row['c1'], row['c2'])
+        df.applymap
+
+    def test_framingApply(self):
+        #https://stackoverflow.com/questions/16476924/how-to-iterate-over-rows-in-a-dataframe-in-pandas first version
+        # 
+        df = pd.DataFrame({'c1': [10, 11, 12], 'c2': [100, 110, 120]})
+        for index, row in df.iterrows():
+            print(row['c1'], row['c2'])
+        
+        df.apply(transformationForData, axis=0, raw=False, result_type=None, args=())
+        #DataFrame.apply(func, axis=0, raw=False, result_type=None, args=(), **kwds)
+        #transformingMain("testing")
+        bar_func()
+
+    def test_sanity1(self):
+        result = bar_func()
+        result = transformationForData("testing")
+        self.assertEqual(result,"testausta")
+
+    def test_sanity2(self):
+        df = pd.DataFrame([[4, 9]] * 3, columns=['A', 'B'])
+        print(df.apply(np.sqrt))
+        print(df)
+
 
 if __name__ == '__main__':
     unittest.main()
