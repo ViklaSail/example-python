@@ -6,6 +6,8 @@ import awesome
 # 12.1.2020 something close to functional programming
 # map, reduce and filter operations
 # https://stackoverflow.com/questions/31127824/what-are-pythons-equivalent-of-javascripts-reduce-map-and-filter
+# for dataframe there is this functionality build in 
+# DataFrame.apply, DataFrame.applymap
 # datasets for cleaning exercises: https://makingnoiseandhearingthings.com/2018/04/19/datasets-for-data-cleaning-practice/
 # 11.1.2020 utest and related. 
 # from app.mocking import test_method
@@ -61,6 +63,16 @@ class TestMethods(unittest.TestCase):
         test_para.return_value = "SAME NAMESPACE"
         result  = funcSameNameSpace()
         self.assertEqual(result,"testausta")
+
+    def test_playdata(self):
+        #https://stackoverflow.com/questions/16476924/how-to-iterate-over-rows-in-a-dataframe-in-pandas first version
+        # 
+        from functools import reduce
+        import pandas as pd
+        import numpy as np
+        df = pd.DataFrame({'c1': [10, 11, 12], 'c2': [100, 110, 120]})
+        for index, row in df.iterrows():
+            print(row['c1'], row['c2'])
 
 if __name__ == '__main__':
     unittest.main()
