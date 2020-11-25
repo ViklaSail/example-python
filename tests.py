@@ -21,8 +21,9 @@ from example_pkg import funcSameNameSpace
 # https://stackoverflow.com/questions/46464947/python-function-not-using-the-mocked-object
 # possible solution maybe here https://docs.python.org/3/library/unittest.mock.html#where-to-patch
 from example_pkg import foo_func
+from example_pkg import bar_func
 
-import pipeLine
+# import pipeLine
 
 url = 'http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json'
 
@@ -33,7 +34,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(awesome.smile(), ":)")
   
     def test_anotherOne(self):
-        barres = example_pkg.bar_func()
+        barres = bar_func()
         self.assertRegexpMatches(barres,".*bar.*")
     
     #def test_pipeline(self):
