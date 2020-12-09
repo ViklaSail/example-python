@@ -12,6 +12,7 @@ from example_pkg import foo_func
 from example_pkg import bar_func
 from dataTransforming import transformationForData
 from dataTransforming import transformationTestingWithApply
+from dataTransforming import transformFoo
 
 from functools import reduce
 import pandas as pd
@@ -20,6 +21,13 @@ import numpy as np
 url = 'http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json'
 
 class TestMethods_live(unittest.TestCase):
+    def test_transformation(self):
+        # call to function changing some "global" data structure 
+        # assert function is checking that the change you expected happens properly. 
+        result = transformFoo()
+        self.assertEqual("foo", result)
+        self.assertEqual(awesome.smile(), ":)")
+
     def test_assertion_1(self):
         # call to function changing some "global" data structure 
         # assert function is checking that the change you expected happens properly. 

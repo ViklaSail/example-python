@@ -17,3 +17,9 @@ def transformationTestingWithApply(cell):
 def columnBHandling(cell):
     result = cell - 5
     return result
+
+
+def transformFoo():
+    return "something"
+
+# REAL FUNCTIONS BELOW THIS FILE

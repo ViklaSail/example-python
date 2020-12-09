@@ -6,7 +6,8 @@ Example on how to import function from this package
 from dataTransforming import transformationForData
 '''
 
-from .transformingMain import *
+from .tools import *
+
 
 
 

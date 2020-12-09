@@ -2,6 +2,8 @@ import requests
 import urllib.request
 import time
 from bs4 import BeautifulSoup
+
+import tools
 # INSTRUCTIONS 
 # Mocking https://docs.python.org/3/library/unittest.mock-examples.html
 # google: python unittest mock tutorial
@@ -18,6 +20,7 @@ from bs4 import BeautifulSoup
 # example: conda create -n env-01 python=3.8.2 
 
 def getData():
+    temp = tools.tools.laughing()
     # url = 'http://web.mta.info/developers/turnstile.html'
     url = 'http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json'
     response = requests.get(url) # task: mock this function. if applicable use with your own data source (URL)
